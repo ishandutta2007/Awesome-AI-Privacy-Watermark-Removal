@@ -30,15 +30,15 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The global AI content provenance and deepfake detection market is estimated at **$4.4B+ in 2026** (with content provenance infrastructure at ~$3.7B growing at 21.8% CAGR and deepfake detection at ~$700M–$1B growing at 28%+ CAGR toward $20B+ by the mid-2030s). The sector remains **highly fragmented** rather than winner-take-all, divided between preventative cryptographic metadata signing (C2PA/CAWG coalitions led by tech giants) and dynamic multi-modal forensic classifiers (voice, image, and video detection startups), driven by strict compliance mandates such as EU AI Act Article 50.
 
 ## SaaS/Hosted Platforms
 
