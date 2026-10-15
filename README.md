@@ -59,103 +59,76 @@ The global AI content provenance and deepfake detection market is estimated at *
 
 ## Open-Source GitHub Projects
 
+- **[watermarks-remover](https://github.com/guillaumemeyer/watermarks-remover)** [![GitHub stars](https://img.shields.io/github/stars/guillaumemeyer/watermarks-remover?style=social&color=white)](https://github.com/guillaumemeyer/watermarks-remover/stargazers)  
+  **The most comprehensive open-source AI privacy utility for provenance marks and metadata** (MIT). **24,000+ GitHub stars**—one of the fastest-growing privacy tools of 2026. **Developed by French developer Guillaume Meyer** in response to Anthropic's announcement of invisible watermarks in Claude outputs. **Three-layer architecture**: **Layer A** (deterministic cleaning) removes hidden Unicode characters, zero-width joiners, bidi overrides, and tag characters from text; **Layer B** (statistical watermark disruption) rewrites text via external models to break token-sampling patterns—covering Claude, Gemini/SynthID-Text, OpenAI, and open LLM Kirchenbauer-style watermarks; **File layer** strips C2PA/EXIF/XMP metadata from PNG, JPEG, WebP, SVG, PDF, DOCX, ODT, HTML, and Markdown. **Pure Python 3.10+ standard library**—near-zero installation cost.
 
+- **[remove-ai-watermarks](https://github.com/wiltodelta/remove-ai-watermarks)** [![GitHub stars](https://img.shields.io/github/stars/wiltodelta/remove-ai-watermarks?style=social&color=white)](https://github.com/wiltodelta/remove-ai-watermarks/stargazers)  
+  **CLI and Python library to strip visible and invisible AI watermarks and provenance metadata** (MIT). **6,000+ GitHub stars**. Features **visible watermark removal** (Gemini sparkle, vendor text marks), **invisible watermark removal** through diffusion regeneration, **C2PA/EXIF/XMP/IPTC metadata stripping**, and **region-specific erasing** with coordinates. **Multiple removal backends**: OpenCV inpainting, **MI-GAN**, **LaMA**, and **qwen-zimage** (highest fidelity for face-heavy images, CUDA only). Includes hosted web version at raiw.cc.
 
-- **[watermarks-remover](https://github.com/guillaumemeyer/watermarks-remover)**  
+- **[watermark-removal](https://github.com/zuruoke/watermark-removal)** [![GitHub stars](https://img.shields.io/github/stars/zuruoke/watermark-removal?style=social&color=white)](https://github.com/zuruoke/watermark-removal/stargazers)  
+  **Deep learning image inpainting framework for watermark removal** (Apache-2.0). **5,100+ GitHub stars**. Deep neural network that instinctively detects and removes visible watermarks and overlay artifacts from images, generating seamless reconstructed patches indistinguishable from the ground truth image.
 
-  **The most comprehensive open-source AI privacy utility for provenance marks and metadata** (MIT). **19,000+ GitHub stars** within weeks of launch—one of the fastest-growing privacy tools of 2026 . **Developed by French developer Guillaume Meyer** in response to Anthropic's announcement of invisible watermarks in Claude outputs . **Three-layer architecture**: **Layer A** (deterministic cleaning) removes hidden Unicode characters, zero-width joiners, bidi overrides, and tag characters from text; **Layer B** (statistical watermark disruption) rewrites text via external models to break token-sampling patterns—covering Claude, Gemini/SynthID-Text, OpenAI, and open LLM Kirchenbauer-style watermarks ; **File layer** strips C2PA/EXIF/XMP metadata from PNG, JPEG, WebP, SVG, PDF, DOCX, ODT, HTML, and Markdown . **Pure Python 3.10+ standard library**—near-zero installation cost. **Ollama and OpenAI-compatible model support** for local rewriting . **Honest about limits**: "在厂商放出公开检测器和密钥之前，没有任何工具能诚实证明'通过了官方检测失败'" —no tool can honestly claim detection failure until vendors release public detectors .
+- **[reverse-SynthID](https://github.com/aloshdenny/reverse-SynthID)** [![GitHub stars](https://img.shields.io/github/stars/aloshdenny/reverse-SynthID?style=social&color=white)](https://github.com/aloshdenny/reverse-SynthID/stargazers)  
+  **Reverse engineering and detection analysis of Google Gemini's SynthID** (MIT). **4,900+ GitHub stars**. Research project deconstructing the spectral and frequency-domain embedding mechanics behind Google DeepMind's SynthID image watermarking, analyzing resilience against geometric distortion, color perturbations, and compression.
 
+- **[cnn-watermark-removal](https://github.com/marcbelmont/cnn-watermark-removal)** [![GitHub stars](https://img.shields.io/github/stars/marcbelmont/cnn-watermark-removal?style=social&color=white)](https://github.com/marcbelmont/cnn-watermark-removal/stargazers)  
+  **Fully convolutional deep neural network to remove transparent overlays from images** (MIT). **1,200+ GitHub stars**. End-to-end CNN that accurately isolates semi-transparent watermarks and text banners, inverting alpha blending to restore underlying high-frequency textures without degrading the surrounding photo.
 
+- **[synthid-text](https://github.com/google-deepmind/synthid-text)** [![GitHub stars](https://img.shields.io/github/stars/google-deepmind/synthid-text?style=social&color=white)](https://github.com/google-deepmind/synthid-text/stargazers)  
+  **Official reference implementation of SynthID for text generation** by Google DeepMind (Apache-2.0). **1,100+ GitHub stars**. Provides production-grade algorithms for watermarking and detecting AI-generated text using logits-based pseudo-random tournament sampling without sacrificing generation quality.
 
-- **[universal-ai-watermark-remover](https://pypi.org/project/universal-ai-watermark-remover/)**  
+- **[Watermark-Removal-Pytorch](https://github.com/braindotai/Watermark-Removal-Pytorch)** [![GitHub stars](https://img.shields.io/github/stars/braindotai/Watermark-Removal-Pytorch?style=social&color=white)](https://github.com/braindotai/Watermark-Removal-Pytorch/stargazers)  
+  **CNN for watermark removal using Deep Image Prior in PyTorch** (MIT). **1,100+ GitHub stars**. Leverages deep image priors (DIP) without large training sets, performing blind single-image watermark extraction, localized masking, and neural texture reconstruction directly on target frames.
 
-  **Universal deep learning AI watermark remover and provenance metadata scrubber** (PyPI). **The most feature-complete open-source image watermark removal toolkit.** Features **LaMA neural inpainting** for visible watermark removal—synthesizes authentic textures (sky, clouds, fur) with zero smudging . **Complete C2PA and provenance metadata scrubbing**—scans raw binary byte streams for `c2pa` and `jumb` chunks, strips cryptographic provenance manifests (DALL-E 3, Adobe Firefly, ChatGPT) verified on contentcredentials.org/verify . **AI text and document steganography sanitizer**—detects and strips invisible Unicode watermarks (zero-width spaces, joiners, BOM, bidi overrides, tag characters) from Markdown, Plain Text, DOCX, ODT, and HTML . **Interactive side-by-side web studio** with adjustable brush masking and 1-click auto mask . **Invisible watermark neutralization** (SynthID) via FFT sub-band filtering . **Full video inpainting pipeline** with audio pass-through .
+- **[Synthid-Bypass](https://github.com/cebeuq/Synthid-Bypass)** [![GitHub stars](https://img.shields.io/github/stars/cebeuq/Synthid-Bypass?style=social&color=white)](https://github.com/cebeuq/Synthid-Bypass/stargazers)  
+  **AI safety research demonstrating working bypass against SynthID watermarking** (MIT). **970+ GitHub stars**. Demonstrates three-step reconstruction: Canny edge boundary extraction, low-denoise diffusion regeneration (0.05–0.3 strength), and ControlNet structural preservation to neutralize pixel-space invisible watermarks.
 
+- **[pdfparanoia](https://github.com/kanzure/pdfparanoia)** [![GitHub stars](https://img.shields.io/github/stars/kanzure/pdfparanoia?style=social&color=white)](https://github.com/kanzure/pdfparanoia/stargazers)  
+  **Academic PDF watermark removal and provenance sanitizer** (MIT). **560+ GitHub stars**. Command-line parser and Python library to scrub tracking watermarks, identifying barcodes, and publisher steganographic stamps from academic papers and PDF publications.
 
+- **[c2pa-rs](https://github.com/contentauth/c2pa-rs)** [![GitHub stars](https://img.shields.io/github/stars/contentauth/c2pa-rs?style=social&color=white)](https://github.com/contentauth/c2pa-rs/stargazers)  
+  **Reference Rust SDK for C2PA (Coalition for Content Provenance and Authenticity)** (MIT/Apache-2.0). **430+ GitHub stars**. Industry standard library for creating, signing, parsing, validating, and managing C2PA manifests, JUMBF boxes, and cryptographic provenance chains in media formats.
 
-- **[remove-ai-watermarks](https://github.com/wiltodelta/remove-ai-watermarks)**  
+- **[NaSuno](https://github.com/AhmadHassan-BTed/NaSuno)** [![GitHub stars](https://img.shields.io/github/stars/AhmadHassan-BTed/NaSuno?style=social&color=white)](https://github.com/AhmadHassan-BTed/NaSuno/stargazers)  
+  **AI audio watermark removal & forensic anti-attribution toolkit** (MIT). **340+ GitHub stars**. Neutralizes Suno, Udio, and synthetic audio fingerprints using ISO 226 equal-loudness contour perceptual psychoacoustic masking and phase perturbation while preserving audio fidelity.
 
-  **CLI and Python library to strip visible and invisible AI watermarks and provenance metadata** (MIT). **The most accessible open-source image watermark remover.** Features **visible watermark removal** (Gemini sparkle, vendor text marks), **invisible watermark removal** through diffusion regeneration, **C2PA/EXIF/XMP/IPTC metadata stripping**, and **region-specific erasing** with coordinates . **Multiple removal backends**: OpenCV inpainting, **MI-GAN**, **LaMA**, and **qwen-zimage** (highest fidelity for face-heavy images, CUDA only) . **Online version at raiw.cc** for users who don't want to install Python . **Verified against provider verifiers** for specific output files—"That result applies to these files, not to every seed, image, or future watermark version" .
+- **[SLBR-Visible-Watermark-Removal](https://github.com/bcmi/SLBR-Visible-Watermark-Removal)** [![GitHub stars](https://img.shields.io/github/stars/bcmi/SLBR-Visible-Watermark-Removal?style=social&color=white)](https://github.com/bcmi/SLBR-Visible-Watermark-Removal/stargazers)  
+  **Self-calibrated localization and background refinement watermark remover** (ACM MM, MIT). **250+ GitHub stars**. Two-stage architecture performing automated watermark localization followed by background refinement to eliminate complex colored and structured overlays.
 
+- **[noai-watermark](https://github.com/mertizci/noai-watermark)** [![GitHub stars](https://img.shields.io/github/stars/mertizci/noai-watermark?style=social&color=white)](https://github.com/mertizci/noai-watermark/stargazers)  
+  **Invisible watermark remover and AI metadata cleaner** (MIT). **200+ GitHub stars**. CLI and Python package targeting SynthID, StableSignature, and TreeRing watermarks alongside C2PA and generative metadata stripping.
 
+- **[video-watermark-removal](https://github.com/m3at/video-watermark-removal)** [![GitHub stars](https://img.shields.io/github/stars/m3at/video-watermark-removal?style=social&color=white)](https://github.com/m3at/video-watermark-removal/stargazers)  
+  **Automated video watermark detection and removal pipeline** (MIT). **210+ GitHub stars**. Lightweight tool that detects stationary and dynamic watermark boxes across video streams and removes them using multi-frame temporal inpainting.
 
-- **[watermark-remover](https://pypi.org/project/watermark-remover/0.4.0/)**  
+- **[c2patool](https://github.com/contentauth/c2patool)** [![GitHub stars](https://img.shields.io/github/stars/contentauth/c2patool?style=social&color=white)](https://github.com/contentauth/c2patool/stargazers)  
+  **Official CLI utility for C2PA manifest inspection and injection** (MIT/Apache-2.0). **140+ GitHub stars**. Adobe and C2PA tool to view detailed manifest reports, examine assertion chains, and inject signed provenance into media files from the command line.
 
-  **Tools for finding and removing AI provenance signals from files you own** (PyPI). **The most text-focused open-source watermark removal toolkit.** **Layer A** removes zero-width characters, space-swaps, and other reversible Unicode artifacts . **Layer B** replaces original wording via LLM rewrite to disrupt statistical watermarks—with explicit warning: "重写会扁平化语气与精度" (rewriting flattens voice and precision) . **Character-level perturbations** (zero-width, space-swap, confusable, case) inspired by 2026 character-perturbation research—explicitly "not a hygiene pass and carries no detector guarantee" . **Image visible mark removal** with MorphoMod and external detector/inpainter adapters . **Opt-in image degradation** (frequency-domain DCT, blur, median, jpeg, rotate) for invisible watermark disruption .
+- **[ai-audio-fingerprint-remover](https://github.com/geeknik/ai-audio-fingerprint-remover)** [![GitHub stars](https://img.shields.io/github/stars/geeknik/ai-audio-fingerprint-remover?style=social&color=white)](https://github.com/geeknik/ai-audio-fingerprint-remover/stargazers)  
+  **Python tool to sanitize AI-generated fingerprints, watermarks, and metadata from audio** (MIT). **130+ GitHub stars**. Strips ultrasonic signatures, phase shifts, and manufacturer metadata tags from synthetic and voice-cloned audio assets.
 
+- **[reverse-SynthID-text](https://github.com/aloshdenny/reverse-SynthID-text)** [![GitHub stars](https://img.shields.io/github/stars/aloshdenny/reverse-SynthID-text?style=social&color=white)](https://github.com/aloshdenny/reverse-SynthID-text/stargazers)  
+  **Reverse engineering of SynthID text watermarking algorithms** (MIT). **130+ GitHub stars**. Analyzes statistical distribution and vocabulary rank distortions introduced by LLM watermark sampling, testing perturbation and paraphrase resilience.
 
+- **[c2pa (Go)](https://github.com/richardwooding/c2pa)** [![GitHub stars](https://img.shields.io/github/stars/richardwooding/c2pa?style=social&color=white)](https://github.com/richardwooding/c2pa/stargazers)  
+  **Pure Go implementation of C2PA validation** (MIT). Performs complete C2PA validation algorithm in pure Go—COSE signature verification, certificate chain enforcement, hash bindings, and Merkle BMFF verification with zero network dependency.
 
-- **[SynthID Watermark Remover](https://huggingface.co/spaces/Clock070303/synth-id-remover)**  
+### Additional Strong Open-Source & Ecosystem Tools
 
-  **Research tool demonstrating removal of invisible SynthID watermarks from AI-generated images** (MIT). **The most transparent open-source SynthID removal implementation.** Based on the **SynthID-Bypass research** by 00quebec . **Three-step technique**: Canny edge detection for structural extraction, **low-denoise diffusion** (multiple passes at 0.05-0.3 strength) to "re-noise" the image and replace watermark-carrying pixels, and **ControlNet guidance** to preserve composition and structure . **Explicitly educational and AI safety research only**—"Do NOT use for malicious purposes, Do NOT use to circumvent copyright, Do NOT use to misrepresent content origin" . **Honest about technique**: "watermarks embedded in pixel space are vulnerable to reconstruction-style attacks" .
-
-
-
-- **[c2pa (Go)](https://github.com/richardwooding/c2pa)**  
-
-  **Pure Go implementation of C2PA validation** (MIT). **The most standards-compliant open-source C2PA verifier.** Performs the **complete C2PA validation algorithm** in pure Go—COSE signature verification (ES256/384/512, PS256/384/512, EdDSA), certificate chain and C2PA profile enforcement, hash bindings (hard binding and assertion hashed_uri), **Merkle BMFF verification** for fragmented assets, **RFC 3161 timestamp** full CMS signature verification, revocation (OCSP/CRL, opt-in), and **CAWG identity assertions** . **Structured validation results** with per-step status codes and explanations . **No network access required**—offline verification by default .
-
-
-
-- **[c2patxt](https://pypi.org/project/c2patxt/)**  
-
-  **Text watermarking using C2PA standards** (PyPI). **The most sophisticated open-source text provenance implementation.** Embeds marks as **variation selectors** costing 3 or 4 UTF-8 bytes per manifest byte . **Survives copy-paste** where applications preserve variation selectors . **Does NOT survive NFC/NFD normalization**—canonically equivalent forms that render identically can still invalidate the binding ("assertion.dataHash.malformed") . **Explicitly documents limits**: "Detects every stored-byte edit? No. The binding covers NFC-normalized text" . **Generation uses Ed25519**; validation accepts the full C2PA 2.4 signature set . **No quantum resistance**—all accepted algorithms are classical .
-
-
-
-- **[encypher-c2pa](https://pypi.org/project/encypher-c2pa/)**  
-
-  **Local-first, verification-only C2PA + CAWG SDK for Rust, Python, Go, and browser JavaScript** (PyPI). **The most privacy-preserving open-source C2PA verifier.** **Verification stays local by default and makes no network call** . **Packaged trust snapshots** with caller-supplied PEM bundle extension . **Explicit separation of conclusions**: integrity, signature, hard_binding, trust, revocation, freshness are all reported independently . **`--no-default-trust`** ignores packaged lists and evaluates only caller-supplied material . **Optional Encypher API cross-check** sends only asset SHA-256, byte length, MIME type, and bounded verdict summary—never the full asset .
-
-
-
-- **[c2pa-rs](https://github.com/encypherai/c2pa-rs)**  
-
-  **Rust library for C2PA and CAWG identity assertions** (MIT/Apache-2.0). **The reference open-source C2PA implementation.** Creates and signs C2PA claims and manifests, creates/signs/validates **CAWG identity assertions**, embeds manifests in supported formats, parses and validates manifests . **Thread-safe Context API** for configuration (Send + Sync, multiple instances) . **Supports C2PA v2 claims by default** .
-
-
-
-- **[jpegtrust](https://pypi.org/project/jpegtrust/)**  
-
-  **Embed, extract, and verify JPEG Trust provenance metadata** (PyPI). **The most accessible open-source C2PA embedding toolkit.** Based on C2PA and JUMBF standards . **Trust profiles** define verification rules as YAML expressions—**newsroom, insurance, creator, and ai-labelling templates** included . **Batch operations** for directories . **Verification reports** with pass/warning/fail status and scores .
-
-
-
-- **[magicdispel](https://pypi.org/project/magicdispel/)**  
-
-  **Privacy-focused metadata stripper that rebuilds files from allowlist** (PyPI). **The most surgical open-source metadata cleaner.** **Rebuilds a new file from an allowlist**—keeps only image data and fields needed to display it (color, orientation, HDR, ICC profile), writes some afresh . **Verifies the result**: must parse on its own, decode to identical frames, satisfy ExifTool . **Refuses files that cannot be safely rebuilt** (damaged, RAW, unknown structures) instead of passing them through . **Preserves HDR gain maps and color profiles**—unlike `exiftool -all=` which strips them and shifts colors . **Detailed format support table** showing exactly what is kept and removed per format .
-
-
-
-- **[image-provenance-inspector](https://pypi.org/project/image-provenance-inspector/)**  
-
-  **Open-source tool for inspecting image metadata, C2PA Content Credentials, and editing provenance** (PyPI). **The most honest open-source provenance inspector.** **Does not collapse uncertain origin and editing signals into one overconfident label** . **Two independent dimensions**: `origin` (CAMERA_CAPTURED, SYNTHETIC, UNKNOWN) and `editing` (NONE_DETECTED, TRADITIONAL, GENERATIVE, UNKNOWN) . **Camera metadata reported as medium-confidence evidence, not proof**—"provenance can be stripped, lost during export, or incomplete" . **Optional original-versus-edited comparison** using SSIM, perceptual hash, and difference mask . **REST API with Pydantic-validated JSON contract** .
-
-
-
-- **[pagedmark](https://pypi.org/project/pagedmark/)**  
-
-  **Visible and invisible watermark removal with 8GB Mac support** (PyPI). **The most resource-conscious open-source image watermark remover.** **Streams weights from CPU one module at a time**—peak device memory 0.28 GiB on 8GB Mac vs 7.70 GiB resident on 16GB Mac, at 24.1s vs 7.1s wall time . **Refuses devices that cannot run invisible removal** instead of falling back to something that will not finish . **Preview mode** capped at 512px for quick fidelity assessment . **Honest about trade-offs**: a 1.52 GiB saving was "measured, implemented, and then withdrawn" because it caused black rectangles over faces . **Metal numerical floors** documented and pinned by tests—below face strength 0.05, fp16 produces garbage .
-
-
-
-- **[bonafide](https://pypi.org/project/bonafide/)**  
-
-  **Calibrated, provenance-first framework for detecting AI-generated media** (PyPI). **The most epistemically honest open-source AI detector.** **Treats detection as evidence aggregation under uncertainty**—fuses hard provenance (C2PA), watermarks (SynthID), and ML detectors into one calibrated probability with confidence interval . **Abstains when evidence doesn't support a confident call** . **C2PA-signed image gives real explained verdict**: "100% AI-generated (CI 99-100%), basis=digitalSourceType:trainedAlgorithmicMedia, validation_state=Trusted, signer=Adobe Inc." . **Unsigned images, spoofs, and ordinary text all return abstain** .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **[proofof-ai-mcp](https://pypi.org/project/proofof-ai-mcp/)** — Digital content verification MCP server (MIT) . Detects AI-generated text, checks images for deepfake signatures, generates signed content certificates, verifies provenance via C2PA/Content Credentials .
-
-- **[deepfake-detector-mcp](https://pypi.org/project/deepfake-detector-mcp/)** — Deepfake detection MCP server (MIT) . Analyzes images, videos, and audio for manipulation artifacts, checks metadata and provenance chains .
-
-- **[Image Metadata Remover (Apify)](https://apify.com/andrew_babo/ai-footprint-remover)** — Bulk image metadata remover (Apify actor) . Removes EXIF, GPS, IPTC, XMP, ICC, Stable Diffusion prompt chunks, C2PA Content Credentials, and AI-generated labels . **Lossless by default**—pixels bit-identical, mean delta 0 . **Scrub mode** for classic invisible watermarks (DWT-DCT) .
-
-- Community **n8n** workflows for provenance scanning and metadata cleaning automation.
+- **[universal-ai-watermark-remover](https://pypi.org/project/universal-ai-watermark-remover/)** — Universal deep learning AI watermark remover with LaMA neural inpainting, C2PA/JUMBF binary scrubbing, and FFT sub-band SynthID filtering.
+- **[magicdispel](https://pypi.org/project/magicdispel/)** [![GitHub stars](https://img.shields.io/github/stars/v1nc3nt-continualab/magicdispel?style=social&color=white)](https://github.com/v1nc3nt-continualab/magicdispel/stargazers) — Surgical metadata cleaner that rebuilds files from an allowlist, preserving HDR gain maps and ICC profiles without color degradation.
+- **[watermark-remover](https://pypi.org/project/watermark-remover/0.4.0/)** — Python toolkit for reversible Unicode artifact hygiene (Layer A) and LLM rewrites to disrupt Kirchenbauer-style statistical token distributions (Layer B).
+- **[c2patxt](https://pypi.org/project/c2patxt/)** — Text provenance tool implementing C2PA specifications using UTF-8 variation selector steganography.
+- **[encypher-c2pa](https://pypi.org/project/encypher-c2pa/)** — Local-first verification-only C2PA + CAWG SDK across Rust, Python, Go, and WebAssembly.
+- **[jpegtrust](https://pypi.org/project/jpegtrust/)** — Python library to embed, extract, and verify JPEG Trust and JUMBF provenance metadata with YAML profiles.
+- **[image-provenance-inspector](https://github.com/KageRyo/image-provenance-inspector)** [![GitHub stars](https://img.shields.io/github/stars/KageRyo/image-provenance-inspector?style=social&color=white)](https://github.com/KageRyo/image-provenance-inspector/stargazers) — Multi-signal inspector evaluating `origin` and `editing` independently via perceptual hash, SSIM, and C2PA.
+- **[pagedmark](https://pypi.org/project/pagedmark/)** — Memory-conscious image watermark remover engineered for Apple Silicon and 8GB Mac architectures.
+- **[bonafide](https://github.com/satchmakua/bonafide)** [![GitHub stars](https://img.shields.io/github/stars/satchmakua/bonafide?style=social&color=white)](https://github.com/satchmakua/bonafide/stargazers) — Calibrated provenance-first framework fusing C2PA, SynthID, and ML classifiers with confidence intervals.
+- **[SynthID Watermark Remover](https://huggingface.co/spaces/Clock070303/synth-id-remover)** — Interactive Hugging Face space demonstrating diffusion-based low-denoise SynthID disruption.
+- **[proofof-ai-mcp](https://pypi.org/project/proofof-ai-mcp/)** — Digital content verification Model Context Protocol (MCP) server for deepfake screening and C2PA signing.
+- **[deepfake-detector-mcp](https://pypi.org/project/deepfake-detector-mcp/)** — Forensic deepfake detection MCP server evaluating media for manipulation artifacts.
+- **[Image Metadata Remover (Apify)](https://apify.com/andrew_babo/ai-footprint-remover)** — Apify actor for bulk lossless metadata scrubbing (EXIF, GPS, C2PA, Stable Diffusion prompt tags).
+- **n8n Community Workflows** — Automation workflows for automated provenance inspection and media hygiene pipelines.
 
 
 
