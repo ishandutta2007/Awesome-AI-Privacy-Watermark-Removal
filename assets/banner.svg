@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d17" />
+      <stop offset="50%" stop-color="#111728" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.3" />
+    </linearGradient>
+
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.3" />
+    </linearGradient>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.45" />
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.25" />
+    </pattern>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseOrb {
+      0% { transform: scale(1) translate(0px, 0px); opacity: 0.35; }
+      50% { transform: scale(1.15) translate(-15px, 10px); opacity: 0.65; }
+      100% { transform: scale(1) translate(0px, 0px); opacity: 0.35; }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+      50% { transform: translateY(-25px) translateX(15px); opacity: 0.8; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+    }
+    @keyframes scanWave {
+      0% { transform: translateX(-200px); opacity: 0; }
+      30% { opacity: 0.45; }
+      70% { opacity: 0.45; }
+      100% { transform: translateX(1300px); opacity: 0; }
+    }
+    @keyframes dashMove {
+      0% { stroke-dashoffset: 400; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .orb-1 { animation: pulseOrb 8s ease-in-out infinite; transform-origin: 200px 100px; }
+    .orb-2 { animation: pulseOrb 10s ease-in-out infinite reverse; transform-origin: 1000px 240px; }
+    .p1 { animation: floatParticle 5s ease-in-out infinite; }
+    .p2 { animation: floatParticle 7s ease-in-out infinite 1.5s; }
+    .p3 { animation: floatParticle 6s ease-in-out infinite 3s; }
+    .scan-line { animation: scanWave 7s linear infinite; }
+    .cyber-flow { stroke-dasharray: 8 6; animation: dashMove 14s linear infinite; }
+    .title-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 40px; fill: url(#title-grad); }
+    .subtitle-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 16px; fill: #94a3b8; }
+    .badge-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 12px; fill: #e2e8f0; }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="100%" height="100%" fill="url(#bg-grad)" rx="16" />
+  <rect width="100%" height="100%" fill="url(#grid)" rx="16" />
+
+  <!-- Animated Glowing Ambient Orbs (Background) -->
+  <g filter="url(#glow)">
+    <circle cx="220" cy="90" r="130" fill="url(#accent-cyan)" class="orb-1" />
+    <circle cx="980" cy="230" r="140" fill="url(#accent-purple)" class="orb-2" />
+  </g>
+
+  <!-- Background Tech Lines & Scan Wave -->
+  <g opacity="0.35">
+    <path d="M 0,280 Q 300,240 600,280 T 1200,280" fill="none" stroke="#38bdf8" stroke-width="2" class="cyber-flow" />
+    <path d="M 0,70 Q 400,110 800,70 T 1200,90" fill="none" stroke="#a855f7" stroke-width="1.5" class="cyber-flow" />
+  </g>
+  <rect x="0" y="0" width="120" height="360" fill="url(#title-grad)" opacity="0.08" class="scan-line" />
+
+  <!-- Floating Dynamic Tech Nodes / Shield Particles -->
+  <g>
+    <circle cx="150" cy="220" r="4" fill="#38bdf8" class="p1" />
+    <circle cx="350" cy="60" r="3" fill="#818cf8" class="p2" />
+    <circle cx="850" cy="80" r="4" fill="#c084fc" class="p3" />
+    <circle cx="1060" cy="140" r="3" fill="#38bdf8" class="p1" />
+    <circle cx="700" cy="40" r="2.5" fill="#38bdf8" class="p2" />
+  </g>
+
+  <!-- Foreground Shield / Privacy Watermark Icon -->
+  <g transform="translate(65, 95)" filter="url(#glow)">
+    <polygon points="55,5 105,25 105,75 55,105 5,75 5,25" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5" />
+    <path d="M 30,55 L 48,72 L 80,38" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Foreground Primary Header & Content -->
+  <g transform="translate(195, 0)">
+    <!-- Category Pill -->
+    <g transform="translate(0, 70)">
+      <rect width="260" height="26" rx="13" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="14" cy="13" r="5" fill="#10b981" />
+      <text x="26" y="17" class="badge-label" fill="#10b981">CURATED PRIVACY ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="138" class="title-text" filter="url(#glow)">Awesome AI Privacy &amp; Watermark Removal</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="176" class="subtitle-text">Provenance Metadata Stripping • Invisible Watermark Neutralization • C2PA &amp; Deepfake Defense</text>
+
+    <!-- Interactive / Feature Pills in Foreground -->
+    <g transform="translate(0, 215)">
+      <!-- Pill 1: C2PA Sanitization -->
+      <g transform="translate(0, 0)">
+        <rect width="180" height="34" rx="8" fill="#131b2e" stroke="#0284c7" stroke-width="1.2" />
+        <text x="90" y="21" class="badge-label" text-anchor="middle" fill="#38bdf8">🛡️ C2PA Manifest Scrub</text>
+      </g>
+
+      <!-- Pill 2: SynthID Neutralization -->
+      <g transform="translate(195, 0)">
+        <rect width="200" height="34" rx="8" fill="#1e1833" stroke="#9333ea" stroke-width="1.2" />
+        <text x="100" y="21" class="badge-label" text-anchor="middle" fill="#c084fc">✨ SynthID Neutralization</text>
+      </g>
+
+      <!-- Pill 3: EXIF / IPTC Lossless -->
+      <g transform="translate(410, 0)">
+        <rect width="170" height="34" rx="8" fill="#122528" stroke="#0d9488" stroke-width="1.2" />
+        <text x="85" y="21" class="badge-label" text-anchor="middle" fill="#2dd4bf">🧹 Lossless Metadata</text>
+      </g>
+
+      <!-- Pill 4: Open Source & SaaS -->
+      <g transform="translate(595, 0)">
+        <rect width="185" height="34" rx="8" fill="#1f1d2b" stroke="#e11d48" stroke-width="1.2" />
+        <text x="92" y="21" class="badge-label" text-anchor="middle" fill="#fb7185">⚡ Open-Source &amp; SaaS</text>
+      </g>
+    </g>
+
+    <!-- Dynamic Flow Indicator Bar -->
+    <g transform="translate(0, 275)">
+      <text x="0" y="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#64748b" font-weight="600">PIPELINE SANITIZATION:</text>
+      <text x="145" y="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Raw File → Header Inspection → Manifest Decoupling → Frequency Denoising → Clean Asset</text>
+    </g>
+  </g>
+</svg>
